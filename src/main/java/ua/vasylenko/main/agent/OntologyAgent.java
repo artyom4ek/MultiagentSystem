@@ -10,12 +10,12 @@ import ua.vasylenko.main.agent.ContentPrepareAgent.ContentPrepareBehaviour;
 import ua.vasylenko.main.agent.ontology.VacanciesOntology;
 
 /*
- * Агент работы с онтологией.
- * @Created by Тёма on 12.09.2017.
+ * РђРіРµРЅС‚ СЂР°Р±РѕС‚С‹ СЃ РѕРЅС‚РѕР»РѕРіРёРµР№.
+ * @Created by РўС‘РјР° on 12.09.2017.
  * @version 1.0
  */
 public class OntologyAgent extends Agent implements UrlConnectable{
-	//TODO: Допедалить реализацию класса работы с онтологиями.
+	//TODO: Р”РѕРїРµРґР°Р»РёС‚СЊ СЂРµР°Р»РёР·Р°С†РёСЋ РєР»Р°СЃСЃР° СЂР°Р±РѕС‚С‹ СЃ РѕРЅС‚РѕР»РѕРіРёСЏРјРё.
 	
 	// This agent "speaks" the SL language.
 	private Codec codec = new SLCodec();

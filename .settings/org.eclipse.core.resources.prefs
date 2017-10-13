@@ -1,3 +1,16 @@
 eclipse.preferences.version=1
+encoding//src/main/java/ua/vasylenko/main/MainForm.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/UrlConnectable.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/agent/ContentPrepareAgent.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/agent/LinksSaverAgent.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/agent/LinksSearcherAgent.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/agent/OntologyAgent.java=UTF-8
 encoding//src/main/java/ua/vasylenko/main/agent/SingletonSetup.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/agent/ontology/Link.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/agent/ontology/VacanciesOntology.java=Cp1251
+encoding//src/main/java/ua/vasylenko/main/agent/ontology/Vocabulary.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/agent/ontology/impl/DefaultLink.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/controller/MainFormController.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/controller/RootController.java=UTF-8
+encoding//src/main/java/ua/vasylenko/main/model/VacancyModel.java=UTF-8
 encoding/<project>=UTF-8

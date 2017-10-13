@@ -18,34 +18,34 @@ import javafx.scene.control.TextArea;
 import ua.vasylenko.main.agent.ontology.VacanciesOntology;
 
 /*
- * Агент работы с сохранением полученных ссылок или резалтов.
- * @Created by Тёма on 11.09.2017.
+ * РђРіРµРЅС‚ СЂР°Р±РѕС‚С‹ СЃ СЃРѕС…СЂР°РЅРµРЅРёРµРј РїРѕР»СѓС‡РµРЅРЅС‹С… СЃСЃС‹Р»РѕРє РёР»Рё СЂРµР·Р°Р»С‚РѕРІ.
+ * @Created by РўС‘РјР° on 11.09.2017.
  * @version 1.0
  */
 public class LinksSaverAgent extends Agent {
-	/** Ссылки на компоненты главной формы. */
+	/** РЎСЃС‹Р»РєРё РЅР° РєРѕРјРїРѕРЅРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ С„РѕСЂРјС‹. */
 	private TextArea textAreaTemp;
 	private ProgressBar progressBarTemp;
 	
 	@Override
 	public void setup()
 	{
-		// Получаем аргументы, которым соответствуют компоненты главной формы.
+		// РџРѕР»СѓС‡Р°РµРј Р°СЂРіСѓРјРµРЅС‚С‹, РєРѕС‚РѕСЂС‹Рј СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‚ РєРѕРјРїРѕРЅРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ С„РѕСЂРјС‹.
 		textAreaTemp = (TextArea)getArguments()[0];
 		progressBarTemp = (ProgressBar)getArguments()[1];
 
-		// Добавляем поведение к агенту.
+		// Р”РѕР±Р°РІР»СЏРµРј РїРѕРІРµРґРµРЅРёРµ Рє Р°РіРµРЅС‚Сѓ.
 		addBehaviour(new MessageBehaviour());
 	}
 	
-	/** Внутренний класс поведения агента работы с сохранением ссылок или резалтов. */
+	/** Р’РЅСѓС‚СЂРµРЅРЅРёР№ РєР»Р°СЃСЃ РїРѕРІРµРґРµРЅРёСЏ Р°РіРµРЅС‚Р° СЂР°Р±РѕС‚С‹ СЃ СЃРѕС…СЂР°РЅРµРЅРёРµРј СЃСЃС‹Р»РѕРє РёР»Рё СЂРµР·Р°Р»С‚РѕРІ. */
 	public class MessageBehaviour extends CyclicBehaviour {
 		public void action() {
 			ACLMessage msg = myAgent.receive();
 			if (msg != null) {
 				
-				// Посколько работаем не с GUI потока, необходима такая конструкция для доступа к GUI элементам
-				// основного потока.
+				// РџРѕСЃРєРѕР»СЊРєРѕ СЂР°Р±РѕС‚Р°РµРј РЅРµ СЃ GUI РїРѕС‚РѕРєР°, РЅРµРѕР±С…РѕРґРёРјР° С‚Р°РєР°СЏ РєРѕРЅСЃС‚СЂСѓРєС†РёСЏ РґР»СЏ РґРѕСЃС‚СѓРїР° Рє GUI СЌР»РµРјРµРЅС‚Р°Рј
+				// РѕСЃРЅРѕРІРЅРѕРіРѕ РїРѕС‚РѕРєР°.
 				Platform.runLater(() -> {
 					progressBarTemp.setProgress(ProgressBar.INDETERMINATE_PROGRESS);
 				});
@@ -60,7 +60,7 @@ public class LinksSaverAgent extends Agent {
 							textAreaTemp.selectPositionCaret(textAreaTemp.getLength()); 
 							textAreaTemp.deselect();
 						});
-						// Усыпим тред для отображения работы прогресса.
+						// РЈСЃС‹РїРёРј С‚СЂРµРґ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЂР°Р±РѕС‚С‹ РїСЂРѕРіСЂРµСЃСЃР°.
 						Thread.sleep(200);
 					} 
 					

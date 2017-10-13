@@ -9,19 +9,19 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 /*
- * Интерефейс настройки подключения Jsoup. 
- * @Created by Тёма on 11.09.2017.
+ * РРЅС‚РµСЂРµС„РµР№СЃ РЅР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ Jsoup. 
+ * @Created by РўС‘РјР° on 11.09.2017.
  * @version 1.0
  */
 public interface UrlConnectable {
 	
 	/**
-	 * Метод подключения с сайту.
-	 * @param url входная ссылка на страницу сайта.
-	 * @return документ для обработки.
-	 * @throws MalformedURLException если адрес указан неверно.
-	 * @throws IOException ошибка ввода/вывода.
-	 * @throws URISyntaxException если используется неправильный URI.
+	 * РњРµС‚РѕРґ РїРѕРґРєР»СЋС‡РµРЅРёСЏ СЃ СЃР°Р№С‚Сѓ.
+	 * @param url РІС…РѕРґРЅР°СЏ СЃСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЃР°Р№С‚Р°.
+	 * @return РґРѕРєСѓРјРµРЅС‚ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё.
+	 * @throws MalformedURLException РµСЃР»Рё Р°РґСЂРµСЃ СѓРєР°Р·Р°РЅ РЅРµРІРµСЂРЅРѕ.
+	 * @throws IOException РѕС€РёР±РєР° РІРІРѕРґР°/РІС‹РІРѕРґР°.
+	 * @throws URISyntaxException РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РЅРµРїСЂР°РІРёР»СЊРЅС‹Р№ URI.
 	 */
 	static Document connectToUrl(String url) throws MalformedURLException, IOException, URISyntaxException {
 		Document htmlDocument = Jsoup.connect(new URL(url).toURI().toASCIIString())

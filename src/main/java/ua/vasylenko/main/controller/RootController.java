@@ -1,10 +1,10 @@
 package ua.vasylenko.main.controller;
 
 /*
- * Контроллер обработки действий RootLayout.fxml
- * @Created by Тёма on 10.09.2017.
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РѕР±СЂР°Р±РѕС‚РєРё РґРµР№СЃС‚РІРёР№ RootLayout.fxml
+ * @Created by РўС‘РјР° on 10.09.2017.
  * @version 1.0
  */
 public class RootController {
-	//TODO: Необходимо допилить обработку кнопок меню.
+	//TODO: РќРµРѕР±С…РѕРґРёРјРѕ РґРѕРїРёР»РёС‚СЊ РѕР±СЂР°Р±РѕС‚РєСѓ РєРЅРѕРїРѕРє РјРµРЅСЋ.
 }

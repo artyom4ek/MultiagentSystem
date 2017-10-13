@@ -19,12 +19,12 @@ import javafx.scene.layout.GridPane;
 import ua.vasylenko.main.agent.SingletonSetup;
 
 /*
- * Контроллер обработки действий MainFormLayout.fxml
- * @Created by Тёма on 10.09.2017.
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РѕР±СЂР°Р±РѕС‚РєРё РґРµР№СЃС‚РІРёР№ MainFormLayout.fxml
+ * @Created by РўС‘РјР° on 10.09.2017.
  * @version 1.0
  */
 public class MainFormController{
-	/** ----------------Компоненты главной формы -----------------*/
+	/** ----------------РљРѕРјРїРѕРЅРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ С„РѕСЂРјС‹ -----------------*/
 	@FXML
 	private GridPane mainFormBasicGrid;
 	
@@ -40,7 +40,7 @@ public class MainFormController{
 	@FXML
 	private TextField urlEntryField;
 	
-	/**---------------------Геттеры/сеттеры ----------------------*/
+	/**---------------------Р“РµС‚С‚РµСЂС‹/СЃРµС‚С‚РµСЂС‹ ----------------------*/
 	public GridPane getMainFormBasicGrid() {
 		return mainFormBasicGrid;
 	}
@@ -66,15 +66,15 @@ public class MainFormController{
 	}
 	
 	/**
-	 * Метод "очистки" входящей ссылки.
-	 * @return "чистая" ссылка.
+	 * РњРµС‚РѕРґ "РѕС‡РёСЃС‚РєРё" РІС…РѕРґСЏС‰РµР№ СЃСЃС‹Р»РєРё.
+	 * @return "С‡РёСЃС‚Р°СЏ" СЃСЃС‹Р»РєР°.
 	 */
 	private String getUrlText() {
 		return urlEntryField.getText().trim();
 	}
 	
 	/**
-	 * Метод запускает процесс создания агентов поиска ссылок.
+	 * РњРµС‚РѕРґ Р·Р°РїСѓСЃРєР°РµС‚ РїСЂРѕС†РµСЃСЃ СЃРѕР·РґР°РЅРёСЏ Р°РіРµРЅС‚РѕРІ РїРѕРёСЃРєР° СЃСЃС‹Р»РѕРє.
 	 */
 	@FXML
 	private void searchURLS() {
@@ -87,9 +87,9 @@ public class MainFormController{
 	}
 	
 	/**
-	 * Метод создания агентов.
-	 * @param countAgents количество агентов.
-	 * @param inputUrl входная ссылка для поиска.
+	 * РњРµС‚РѕРґ СЃРѕР·РґР°РЅРёСЏ Р°РіРµРЅС‚РѕРІ.
+	 * @param countAgents РєРѕР»РёС‡РµСЃС‚РІРѕ Р°РіРµРЅС‚РѕРІ.
+	 * @param inputUrl РІС…РѕРґРЅР°СЏ СЃСЃС‹Р»РєР° РґР»СЏ РїРѕРёСЃРєР°.
 	 * @throws StaleProxyException
 	 */
 	private void createAgents(int countAgents, String inputUrl) throws StaleProxyException {
@@ -116,10 +116,10 @@ public class MainFormController{
 	}
 	
 	/**
-	 * Метод вызывается при закрытии приложения.
+	 * РњРµС‚РѕРґ РІС‹Р·С‹РІР°РµС‚СЃСЏ РїСЂРё Р·Р°РєСЂС‹С‚РёРё РїСЂРёР»РѕР¶РµРЅРёСЏ.
 	 */
 	public void exitApplication() {
-		//TODO: Допилить очистку платформы агентов и ее завершение при закрытии приложения.
+		//TODO: Р”РѕРїРёР»РёС‚СЊ РѕС‡РёСЃС‚РєСѓ РїР»Р°С‚С„РѕСЂРјС‹ Р°РіРµРЅС‚РѕРІ Рё РµРµ Р·Р°РІРµСЂС€РµРЅРёРµ РїСЂРё Р·Р°РєСЂС‹С‚РёРё РїСЂРёР»РѕР¶РµРЅРёСЏ.
 		System.out.println("closeee");
 	}
 }

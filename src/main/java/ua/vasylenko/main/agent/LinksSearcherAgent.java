@@ -26,8 +26,8 @@ import jade.wrapper.StaleProxyException;
 import ua.vasylenko.main.UrlConnectable;
 
 /*
- * Класс агента поиска ссылок вакансий на заданной странице. 
- * @Created by Тёма on 11.09.2017.
+ * РљР»Р°СЃСЃ Р°РіРµРЅС‚Р° РїРѕРёСЃРєР° СЃСЃС‹Р»РѕРє РІР°РєР°РЅСЃРёР№ РЅР° Р·Р°РґР°РЅРЅРѕР№ СЃС‚СЂР°РЅРёС†Рµ. 
+ * @Created by РўС‘РјР° on 11.09.2017.
  * @version 1.0
  */
 public class LinksSearcherAgent extends Agent implements UrlConnectable{
@@ -45,12 +45,12 @@ public class LinksSearcherAgent extends Agent implements UrlConnectable{
 
 	}
 	
-	/** Внутренний класс поведения агента поиска ссылок вакансий. */
+	/** Р’РЅСѓС‚СЂРµРЅРЅРёР№ РєР»Р°СЃСЃ РїРѕРІРµРґРµРЅРёСЏ Р°РіРµРЅС‚Р° РїРѕРёСЃРєР° СЃСЃС‹Р»РѕРє РІР°РєР°РЅСЃРёР№. */
 	private class SearchBehaviour extends OneShotBehaviour implements UrlConnectable{
-		/** Ссылка на страницу списка вакансий. */
+		/** РЎСЃС‹Р»РєР° РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЃРїРёСЃРєР° РІР°РєР°РЅСЃРёР№. */
 		private String inputUrl;
 		
-		/** Храним полностью html документ для дальнейшего его анализа. */
+		/** РҐСЂР°РЅРёРј РїРѕР»РЅРѕСЃС‚СЊСЋ html РґРѕРєСѓРјРµРЅС‚ РґР»СЏ РґР°Р»СЊРЅРµР№С€РµРіРѕ РµРіРѕ Р°РЅР°Р»РёР·Р°. */
 		private Document htmlDocument = null;
 		
 		private LinksSearcherAgent linksSearcherAgent;
@@ -65,27 +65,27 @@ public class LinksSearcherAgent extends Agent implements UrlConnectable{
 			try {
 				htmlDocument = UrlConnectable.connectToUrl(inputUrl);
 				/*for(String s : getVacancyLinks()) {
-					System.out.println("Агент " + linksSearcherAgent.getName() + ": " + s);
+					System.out.println("РђРіРµРЅС‚ " + linksSearcherAgent.getName() + ": " + s);
 				}*/
 				/*  
-				// Передаем список найденных ссылок вакансий со страницы.
+				// РџРµСЂРµРґР°РµРј СЃРїРёСЃРѕРє РЅР°Р№РґРµРЅРЅС‹С… СЃСЃС‹Р»РѕРє РІР°РєР°РЅСЃРёР№ СЃРѕ СЃС‚СЂР°РЅРёС†С‹.
 				ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 				msg.addReceiver(new AID("LinksSaverAgent", AID.ISLOCALNAME));
 				 msg.setContentObject(getVacancyLinks());
 				// msg.setContent("Hello from " + myAgent.getLocalName());
 				send(msg);*/
 				 
-				// Тестим передачу и парсинг необходимого контента.
+				// РўРµСЃС‚РёРј РїРµСЂРµРґР°С‡Сѓ Рё РїР°СЂСЃРёРЅРі РЅРµРѕР±С…РѕРґРёРјРѕРіРѕ РєРѕРЅС‚РµРЅС‚Р°.
 				sendUrlToAgent();
 			} catch (IOException | URISyntaxException e) {
-				System.out.println("Ошибка в методе action() класса LinksSearcherAgent: " + e.getMessage()); 
+				System.out.println("РћС€РёР±РєР° РІ РјРµС‚РѕРґРµ action() РєР»Р°СЃСЃР° LinksSearcherAgent: " + e.getMessage()); 
 				e.printStackTrace();
 			}
 		}
 		
 		/**
-		 * Метод извлекает ссылки с заданной страницы. 
-		 * @return список ссылок.
+		 * РњРµС‚РѕРґ РёР·РІР»РµРєР°РµС‚ СЃСЃС‹Р»РєРё СЃ Р·Р°РґР°РЅРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹. 
+		 * @return СЃРїРёСЃРѕРє СЃСЃС‹Р»РѕРє.
 		 */
 		private ArrayList<String> getVacancyLinks() {
 			ArrayList<String> vacancyLinksList = new ArrayList<String>();
@@ -102,7 +102,7 @@ public class LinksSearcherAgent extends Agent implements UrlConnectable{
 		}
 		
 		/**
-		 * Метод отправляет ACL-сообщение с найденной ссылкой другому агенту.
+		 * РњРµС‚РѕРґ РѕС‚РїСЂР°РІР»СЏРµС‚ ACL-СЃРѕРѕР±С‰РµРЅРёРµ СЃ РЅР°Р№РґРµРЅРЅРѕР№ СЃСЃС‹Р»РєРѕР№ РґСЂСѓРіРѕРјСѓ Р°РіРµРЅС‚Сѓ.
 		 */
 		private void sendUrlToAgent() {
 			Element table = htmlDocument.select("table").first();
@@ -111,7 +111,7 @@ public class LinksSearcherAgent extends Agent implements UrlConnectable{
 			for(Element element : urls) {
 				String urlVacancy = "http://rabota.ua"+element.attr("href");
 				
-				// Передаем список найденных ссылок вакансий со страницы.
+				// РџРµСЂРµРґР°РµРј СЃРїРёСЃРѕРє РЅР°Р№РґРµРЅРЅС‹С… СЃСЃС‹Р»РѕРє РІР°РєР°РЅСЃРёР№ СЃРѕ СЃС‚СЂР°РЅРёС†С‹.
 				ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 				msg.addReceiver(new AID("ContentPrepareAgent", AID.ISLOCALNAME));
 				msg.setContent(urlVacancy); 

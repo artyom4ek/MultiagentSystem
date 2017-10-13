@@ -19,21 +19,21 @@ import ua.vasylenko.main.agent.SingletonSetup;
 import ua.vasylenko.main.controller.MainFormController;
 
 /*
- * Íà÷àëüíàÿ ôîðìà ïðèëîæåíèÿ.
- * @Created by Ò¸ìà on 10.09.2017.
+ * ÐÐ°Ñ‡Ð°Ð»ÑŒÐ½Ð°Ñ Ñ„Ð¾Ñ€Ð¼Ð° Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ.
+ * @Created by Ð¢Ñ‘Ð¼Ð° on 10.09.2017.
  * @version 1.0
  */
 public class MainForm extends Application {
-	/** Îñíîâíîé êîíòåéíåð îêíà. */
+	/** ÐžÑÐ½Ð¾Ð²Ð½Ð¾Ð¹ ÐºÐ¾Ð½Ñ‚ÐµÐ¹Ð½ÐµÑ€ Ð¾ÐºÐ½Ð°. */
 	private Stage primaryStage;
 	
-	/** Êîðíåâîé ñëîé ñöåíû. */
+	/** ÐšÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð¹ ÑÐ»Ð¾Ð¹ ÑÑ†ÐµÐ½Ñ‹. */
     private BorderPane rootLayout;
     
-    /** Êîíòðîëëåð ãëàâíîé ôîðìû. */
+    /** ÐšÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€ Ð³Ð»Ð°Ð²Ð½Ð¾Ð¹ Ñ„Ð¾Ñ€Ð¼Ñ‹. */
     private MainFormController mainFormController;
     
-    /** Ãåòòåðû/ñåòòåðû */
+    /** Ð“ÐµÑ‚Ñ‚ÐµÑ€Ñ‹/ÑÐµÑ‚Ñ‚ÐµÑ€Ñ‹ */
     public MainFormController getMainFormController() {
 		return mainFormController;
 	}
@@ -46,28 +46,28 @@ public class MainForm extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
 		
-		// Îòîáðàæàåì êîðíåâîé ìàêåò.
+		// ÐžÑ‚Ð¾Ð±Ñ€Ð°Ð¶Ð°ÐµÐ¼ ÐºÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð¹ Ð¼Ð°ÐºÐµÑ‚.
 		initRootLayout();
 		
-		// Îòîáðàæàåì 
+		// ÐžÑ‚Ð¾Ð±Ñ€Ð°Ð¶Ð°ÐµÐ¼ 
 		showMainFormLayout();
 	}
 
 	/**
-     * Ìåòîä èíèöèàëèçèðóåò êîðíåâîé ìàêåò.
+     * ÐœÐµÑ‚Ð¾Ð´ Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€ÑƒÐµÑ‚ ÐºÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð¹ Ð¼Ð°ÐºÐµÑ‚.
      */
     public void initRootLayout() {
         try {
-            // Çàãðóæàåì êîðíåâîé ìàêåò èç fxml ôàéëà.
+            // Ð—Ð°Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ ÐºÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð¹ Ð¼Ð°ÐºÐµÑ‚ Ð¸Ð· fxml Ñ„Ð°Ð¹Ð»Ð°.
             FXMLLoader rootLayoutLoader = new FXMLLoader();
             
-            // Ïîëó÷àåì äîñòóï ê êàòàëîãó ðåñóðñîâ.
+            // ÐŸÐ¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ð´Ð¾ÑÑ‚ÑƒÐ¿ Ðº ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³Ñƒ Ñ€ÐµÑÑƒÑ€ÑÐ¾Ð².
             rootLayoutLoader.setLocation(getClass().getClassLoader().getResource("view/RootLayout.fxml"));
             rootLayout = (BorderPane) rootLayoutLoader.load();
 
-            // Îòîáðàæàåì ñöåíó, ñîäåðæàùóþ êîðíåâîé ìàêåò.
+            // ÐžÑ‚Ð¾Ð±Ñ€Ð°Ð¶Ð°ÐµÐ¼ ÑÑ†ÐµÐ½Ñƒ, ÑÐ¾Ð´ÐµÑ€Ð¶Ð°Ñ‰ÑƒÑŽ ÐºÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð¹ Ð¼Ð°ÐºÐµÑ‚.
             Scene scene = new Scene(rootLayout);
-            primaryStage.setTitle("Ìóëüòèàãåíòíà ñèñòåìà v1.0");
+            primaryStage.setTitle("ÐœÑƒÐ»ÑŒÑ‚Ð¸Ð°Ð³ÐµÐ½Ñ‚Ð½Ð° ÑÐ¸ÑÑ‚ÐµÐ¼Ð° v1.0");
             primaryStage.setScene(scene);
             primaryStage.setMinHeight(380);
             primaryStage.setMinWidth(480);
@@ -79,20 +79,20 @@ public class MainForm extends Application {
     }
 
 	/**
-     * Ìåòîä îòîáðàæàåì â êîðíåâîì ìàêåòå êîìïîíåíòû ãëàâíîãî îêíà.
+     * ÐœÐµÑ‚Ð¾Ð´ Ð¾Ñ‚Ð¾Ð±Ñ€Ð°Ð¶Ð°ÐµÐ¼ Ð² ÐºÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð¼ Ð¼Ð°ÐºÐµÑ‚Ðµ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ñ‹ Ð³Ð»Ð°Ð²Ð½Ð¾Ð³Ð¾ Ð¾ÐºÐ½Ð°.
      */
     public void showMainFormLayout() {
         try {
-            // Çàãðóæàåì ãëàâíûé ñëîé ôîðìû.
+            // Ð—Ð°Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ Ð³Ð»Ð°Ð²Ð½Ñ‹Ð¹ ÑÐ»Ð¾Ð¹ Ñ„Ð¾Ñ€Ð¼Ñ‹.
             FXMLLoader mainFormLoader = new FXMLLoader();
             mainFormLoader.setLocation(getClass().getClassLoader().getResource("view/MainFormLayout.fxml"));
             GridPane gridPane = (GridPane) mainFormLoader.load();
 
-            // Ïîìåùàåì ñâåäåíèÿ îá àäðåñàòàõ â öåíòð êîðíåâîãî ìàêåòà.
+            // ÐŸÐ¾Ð¼ÐµÑ‰Ð°ÐµÐ¼ ÑÐ²ÐµÐ´ÐµÐ½Ð¸Ñ Ð¾Ð± Ð°Ð´Ñ€ÐµÑÐ°Ñ‚Ð°Ñ… Ð² Ñ†ÐµÐ½Ñ‚Ñ€ ÐºÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð³Ð¾ Ð¼Ð°ÐºÐµÑ‚Ð°.
             rootLayout.setCenter(gridPane);
             
             mainFormController = mainFormLoader.getController();
-            // Âåøàåì ñîáûòèå íà çàêðûòèå îêíà ïðèëîæåíèÿ.
+            // Ð’ÐµÑˆÐ°ÐµÐ¼ ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ðµ Ð½Ð° Ð·Ð°ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ Ð¾ÐºÐ½Ð° Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ.
             primaryStage.setOnHidden(e -> {
                mainFormController.exitApplication();
             });
