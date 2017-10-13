@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<GridPane fx:id="mainFormBasicGrid" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.vasylenko.main.controller.MainFormController">
+  <columnConstraints>
+    <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="ALWAYS" />
+    <RowConstraints />
+    <RowConstraints minHeight="35.0" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.hgrow="ALWAYS">
+         <children>
+            <Label text="URL:" />
+            <TextField fx:id="urlEntryField" prefHeight="25.0" prefWidth="279.0" text="http://rabota.ua/zapros/php-developer/pg">
+               <HBox.margin>
+                  <Insets left="5.0" right="10.0" />
+               </HBox.margin></TextField>
+            <Button fx:id="urlsSearchButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#searchURLS" prefHeight="25.0" prefWidth="61.0" text="Пошук" />
+         </children>
+      </HBox>
+      <Label alignment="TOP_LEFT" text="Результаты пошуку посилань:" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Label>
+      <TextArea fx:id="urlsArea" editable="false" prefWidth="465.0" wrapText="true" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+         </GridPane.margin>
+      </TextArea>
+      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="2">
+         <children>
+            <ProgressBar fx:id="workingResultProgress" prefWidth="200.0" progress="0.0" GridPane.rowIndex="2">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </ProgressBar>
+         </children>
+      </HBox>
+   </children>
+</GridPane>
