@@ -6,37 +6,37 @@ import jade.core.Runtime;
 import jade.wrapper.ContainerController;
 
 /*
- * Класс для настройки контейнера агентов.
- * @Created by Тёма on 11.09.2017.
+ * РљР»Р°СЃСЃ РґР»СЏ РЅР°СЃС‚СЂРѕР№РєРё РєРѕРЅС‚РµР№РЅРµСЂР° Р°РіРµРЅС‚РѕРІ.
+ * @Created by РўС‘РјР° on 11.09.2017.
  * @version 1.0
  */
 public class SingletonSetup {
-	/** Ссылка на инстанс. */
+	/** РЎСЃС‹Р»РєР° РЅР° РёРЅСЃС‚Р°РЅСЃ. */
 	private static volatile SingletonSetup instance;
 	
-	/** Ссылка на контроллер контейнера агентов. */
+	/** РЎСЃС‹Р»РєР° РЅР° РєРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРЅС‚РµР№РЅРµСЂР° Р°РіРµРЅС‚РѕРІ. */
 	private static ContainerController containerController;
 	
 	/**
-	 * Геттер к доступу к контейнеру.
+	 * Р“РµС‚С‚РµСЂ Рє РґРѕСЃС‚СѓРїСѓ Рє РєРѕРЅС‚РµР№РЅРµСЂСѓ.
 	 */
 	public ContainerController getContainerController() {
 		return containerController;
 	}
 
-	/** Конструктор по-умолчанию для Singleton. */
+	/** РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ Singleton. */
 	private SingletonSetup() { }
 	
 	/**
-	 * Метод реализует Singleton.
-	 * @return инстанс.
+	 * РњРµС‚РѕРґ СЂРµР°Р»РёР·СѓРµС‚ Singleton.
+	 * @return РёРЅСЃС‚Р°РЅСЃ.
 	 */
 	public static SingletonSetup getInstance() {
 		
 		if(instance == null) {
 			synchronized (SingletonSetup.class) {
 				if(instance == null) {
-					// Необходимо только раз создать контейнер и работать с ним.
+					// РќРµРѕР±С…РѕРґРёРјРѕ С‚РѕР»СЊРєРѕ СЂР°Р· СЃРѕР·РґР°С‚СЊ РєРѕРЅС‚РµР№РЅРµСЂ Рё СЂР°Р±РѕС‚Р°С‚СЊ СЃ РЅРёРј.
 					containerController = createContainerAgent();
 					return instance = new SingletonSetup();
 				}
@@ -47,8 +47,8 @@ public class SingletonSetup {
 	}
 	
 	/**
-	 * Метод создает контейнер для агентов и возвращает его контроллер.
-	 * @return контроллер созданного контейнера.
+	 * РњРµС‚РѕРґ СЃРѕР·РґР°РµС‚ РєРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ Р°РіРµРЅС‚РѕРІ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ РµРіРѕ РєРѕРЅС‚СЂРѕР»Р»РµСЂ.
+	 * @return РєРѕРЅС‚СЂРѕР»Р»РµСЂ СЃРѕР·РґР°РЅРЅРѕРіРѕ РєРѕРЅС‚РµР№РЅРµСЂР°.
 	 */
 	private static ContainerController createContainerAgent() {
 		Runtime runtime = Runtime.instance();
