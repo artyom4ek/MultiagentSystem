@@ -1,8 +1,8 @@
 package ua.vasylenko.main.model;
 
 /*
- * Класс-модель вакансии.
- * @Created by Тёма on 10.09.2017.
+ * РљР»Р°СЃСЃ-РјРѕРґРµР»СЊ РІР°РєР°РЅСЃРёРё.
+ * @Created by РўС‘РјР° on 10.09.2017.
  * @version 1.0
  */
 public class VacancyModel {
