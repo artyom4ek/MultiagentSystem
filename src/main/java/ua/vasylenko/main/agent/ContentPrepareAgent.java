@@ -13,20 +13,20 @@ import ua.vasylenko.main.UrlConnectable;
 import ua.vasylenko.main.agent.LinksSaverAgent.MessageBehaviour;
 
 /*
- * Агент работы с контентом вакансии полученной ссылки.
- * @Created by Тёма on 11.09.2017.
+ * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
+ * @Created by ТёпїЅпїЅ on 11.09.2017.
  * @version 1.0
  */
 public class ContentPrepareAgent extends Agent implements UrlConnectable{
-	
+	//
 	@Override
 	public void setup()
 	{
-		// Добавляем поведение к агенту.
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
 		addBehaviour(new ContentPrepareBehaviour());
 	}
 	
-	/** Внутренний класс поведения агента работы с контентом вакансии. */		
+	/** пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. */		
 	public class ContentPrepareBehaviour extends CyclicBehaviour {
 		private Document htmlVacancyDocument = null;
 		
@@ -38,7 +38,7 @@ public class ContentPrepareAgent extends Agent implements UrlConnectable{
 					Element vacancyContentDescription = htmlVacancyDocument.getElementsByAttributeValue("itemprop", "description").first();
 					if(vacancyContentDescription != null){
 						
-						// Отобразим весь контент для теста.
+						// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
 						System.out.println(vacancyContentDescription);
 					}
 					
