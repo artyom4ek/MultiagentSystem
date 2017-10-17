@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2017/9/untitled-ontology-17"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/asus/ontologies/2017/9/untitled-ontology-17">
+    <Prefix name="" IRI="http://www.semanticweb.org/тёма/ontologies/2017/9/untitled-ontology-17"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Unknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Вимога3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Вимога2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значення"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Вимога1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Умови"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Обов&apos;язки"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Умова2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Умова1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Обов&apos;язок2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Вимоги"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Обов&apos;язок3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Умова3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Обов&apos;язок1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Вакансія"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Unknown"/>
+        <Class IRI="#Вакансія"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Вимоги"/>
+        <Class IRI="#Вакансія"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Умови"/>
+        <Class IRI="#Вакансія"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Обов&apos;язки"/>
+        <Class IRI="#Вакансія"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Вимоги"/>
+        <NamedIndividual IRI="#Вимога1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вимоги"/>
+        <NamedIndividual IRI="#Вимога2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вимоги"/>
+        <NamedIndividual IRI="#Вимога3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Умови"/>
+        <NamedIndividual IRI="#Умова1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Умови"/>
+        <NamedIndividual IRI="#Умова2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Умови"/>
+        <NamedIndividual IRI="#Умова3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Обов&apos;язки"/>
+        <NamedIndividual IRI="#Обов&apos;язок1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Обов&apos;язки"/>
+        <NamedIndividual IRI="#Обов&apos;язок2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Обов&apos;язки"/>
+        <NamedIndividual IRI="#Обов&apos;язок3"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Вимога1"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">требования</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Вимога2"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">вимоги</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Вимога3"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">requirements</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Умова1"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">условия</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Умова2"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">умови</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Умова3"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">conditions</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Обов&apos;язок1"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">обязанности</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Обов&apos;язок2"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">обов&apos;язки</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значення"/>
+        <NamedIndividual IRI="#Обов&apos;язок3"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">responsibilities</Literal>
+    </DataPropertyAssertion>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#значення"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#значення"/>
+        <Class IRI="#Вимоги"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#значення"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

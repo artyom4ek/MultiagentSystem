@@ -6,6 +6,7 @@ import java.net.URISyntaxException;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
@@ -40,6 +41,12 @@ public class ContentPrepareAgent extends Agent implements UrlConnectable{
 						
 						// Отобразим весь контент для теста.
 						System.out.println(vacancyContentDescription);
+						/*
+						// Передаем список найденных ссылок вакансий со страницы.
+						ACLMessage messageTemp = new ACLMessage(ACLMessage.INFORM);
+						messageTemp.addReceiver(new AID("OntologyAgent", AID.ISLOCALNAME));
+						messageTemp.setContent(vacancyContentDescription.toString()); 
+						send(messageTemp);*/
 					}
 					
 				} catch (IOException | URISyntaxException e) {

@@ -14,8 +14,7 @@ import jade.lang.acl.UnreadableException;
 import jade.wrapper.StaleProxyException;
 import javafx.application.Platform;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TextArea;
-import ua.vasylenko.main.agent.ontology.VacanciesOntology;
+import javafx.scene.control.TextArea; 
 
 /*
  * Агент работы с сохранением полученных ссылок или резалтов.
